@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo {
+    position: relative;
+    margin-top: 40px;
+    margin-left: -600px;
+}
+
+.tagline {
+    margin-top: 20px;
+    margin-left: -600px;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.coming-soon {
+    margin-top: 40px;
+    margin-left: -600px;
+}
+
+.coming-soon h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.app-buttons-google {
+    margin-top: 20px;
+    margin-left: -600px;
+}
+
+.app-buttons-apple {
+    margin-top: 20px;
+    margin-left: -600px;
+}
+
+.app-buttons-google img {
+    width: 150px;
+    margin: 10px;
+}
+
+.app-buttons-apple img {
+    width: 150px;
+    margin: 10px;
+}
+
+.phone-image {
+    margin-top: -560px;
+    margin-right: -850px;
+}
+
+.phone-image img {
+    max-width: 650px;
+    height: auto;
+}
+
+
+/*---------------*/
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow content to dictate height */
+    }
+
+    .logo {
+        margin-left: 0; /* Reset horizontal margin */
+    }
+
+    .tagline,
+    .coming-soon {
+        margin-left: 0; /* Reset horizontal margin */
+    }
+
+    .app-buttons-google,
+    .app-buttons-apple {
+        margin-left: 0; /* Reset horizontal margin */
+    }
+
+    .phone-image {
+        margin-top: 20px; /* Adjust for spacing */
+        margin-right: 0; /* Reset horizontal margin */
+    }
+}
+
+
+
