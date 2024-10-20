@@ -91,19 +91,19 @@ body {
     }
 
     .coming-soon h2 {
-        font-size: 2em; /* Smaller heading size for mobile */
+        font-size: 3em; /* Smaller heading size for mobile */
     }
 
     .app-buttons img {
-        width: 120px; /* Smaller buttons for mobile */
+        width: 150px; /* Smaller buttons for mobile */
     }
 
     .phone-image img {
-        max-width: 70%; /* Smaller image for mobile */
+        max-width: 80%; /* Smaller image for mobile */
         height: auto;
     }
 
     .logo img {
-        max-width: 60%; /* Smaller logo for mobile */
+        max-width: 90%; /* Smaller logo for mobile */
     }
 }
