@@ -17,88 +17,92 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 20px;
 }
 
-.logo {
-    position: relative;
-    margin-top: 40px;
-    margin-left: -550px;
-}
-
-.tagline {
-    margin-top: 20px;
-    margin-left: -600px;
-    font-size: 1.5em;
-    font-style: italic;
-}
-
-.coming-soon {
-    margin-top: 40px;
-    margin-left: -600px;
-}
-
-.coming-soon h2 {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.app-buttons-google {
-    margin-top: 20px;
-    margin-left: -600px;
-}
-
-.app-buttons-apple {
-    margin-top: 20px;
-    margin-left: -600px;
-}
-
-.app-buttons-google img {
-    width: 150px;
-    margin: 10px;
-}
-
-.app-buttons-apple img {
-    width: 150px;
-    margin: 10px;
-}
-
-.phone-image {
-    margin-top: -560px;
-    margin-right: -850px;
-}
-
-.phone-image img {
-    max-width: 650px;
-    height: auto;
-}
-
-
-/*---------------*/
-@media only screen and (max-width: 768px) {
+/* Desktop-specific flexbox layout */
+@media only screen and (min-width: 769px) {
     .container {
-        flex-direction: column; /* Stack items vertically */
-        height: auto; /* Allow content to dictate height */
+        flex-direction: row; /* Horizontal layout for desktop */
+        justify-content: space-between; /* Space between logo and phone */
+        align-items: center;
     }
 
+    .left-content {
+        flex: 1;
+        text-align: left;
+        margin-right: 30px;
+    }
     .logo {
-        margin-left: 0; /* Reset horizontal margin */
+        position: relative;
+        margin-top: 40px;
+        margin-left: 70px;
+    }
+    
+
+    .coming-soon h2 {
+        font-size: 4em; /* Larger font size for desktop */
+        font-weight: bold;
+        margin-left: 150px
     }
 
-    .tagline,
-    .coming-soon {
-        margin-left: 0; /* Reset horizontal margin */
+    /* App buttons container */
+    .app-buttons {
+        display: flex;
+        gap: 15px; /* Add spacing between the buttons */
+        justify-content: flex-start;
+        margin-top: 20px;
     }
 
-    .app-buttons-google,
-    .app-buttons-apple {
-        margin-left: 0; /* Reset horizontal margin */
+    .app-buttons img {
+        width: 200px; /* Larger buttons for desktop */
+        margin: 10px;
+    }
+    .app-buttons-apple img {
+        width: 150px;
+        margin: 10px;
+        margin-left: 50px
+    }
+    
+    .app-buttons-google img {
+        width: 150px;
+        margin: 10px;
+        margin-left: 200px
     }
 
     .phone-image {
-        margin-top: 15px; /* Adjust for spacing */
-        margin-right: 0; /* Reset horizontal margin */
+        flex: 1;
+        margin-left: 90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-image img {
+        max-width: 100%; /* Scale the phone image properly */
+        height: auto;
     }
 }
 
+/* Responsive adjustments for smaller screens (mobile) */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Vertical layout for mobile */
+    }
 
+    .coming-soon h2 {
+        font-size: 2em; /* Smaller heading size for mobile */
+    }
 
+    .app-buttons img {
+        width: 120px; /* Smaller buttons for mobile */
+    }
+
+    .phone-image img {
+        max-width: 70%; /* Smaller image for mobile */
+        height: auto;
+    }
+
+    .logo img {
+        max-width: 60%; /* Smaller logo for mobile */
+    }
+}
