@@ -22,7 +22,7 @@ body {
 .logo {
     position: relative;
     margin-top: 40px;
-    margin-left: -600px;
+    margin-left: -550px;
 }
 
 .tagline {
@@ -95,7 +95,7 @@ body {
     }
 
     .phone-image {
-        margin-top: 20px; /* Adjust for spacing */
+        margin-top: 15px; /* Adjust for spacing */
         margin-right: 0; /* Reset horizontal margin */
     }
 }
