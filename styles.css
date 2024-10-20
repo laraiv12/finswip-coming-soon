@@ -35,7 +35,7 @@ body {
     }
     .logo {
         position: relative;
-        margin-top: 40px;
+        margin-top: 1px;
         margin-left: 70px;
     }
     
@@ -43,7 +43,8 @@ body {
     .coming-soon h2 {
         font-size: 4em; /* Larger font size for desktop */
         font-weight: bold;
-        margin-left: 150px
+        margin-left: 150px;
+        margin-top: 10px;
     }
 
     /* App buttons container */
