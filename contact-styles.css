@@ -106,6 +106,14 @@ p a {
 
 /* Mobile Layout */
 @media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     .contact-container {
         flex-direction: column;
         gap: 20px; /* Add space between sections */
