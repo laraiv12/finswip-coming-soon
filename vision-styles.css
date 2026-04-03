@@ -205,7 +205,7 @@ body {
     border-radius: 50%;
     border: none;
 
-    background: #2563eb;
+    background: rgba(37, 99, 235, 0.7);
     color: white;
     
     display: flex;
@@ -238,6 +238,18 @@ body {
 
 @media (max-width: 768px) {
     .nav-btn {
-        display: none;
+        display: flex; /* This turns the buttons back on */
+        width: 35px;   /* Made slightly smaller for mobile */
+        height: 35px;
+        font-size: 14px; /* Smaller arrow icon */
+    }
+    
+    /* Pushes the arrows slightly closer to the edge on small screens */
+    .nav-btn.left {
+        left: 5px; 
+    }
+
+    .nav-btn.right {
+        right: 5px; 
     }
 }
