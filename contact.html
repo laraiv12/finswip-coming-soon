@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - FinSwip</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="contact-styles.css"> <!-- Reusing the same CSS file -->
+<link rel="stylesheet" href="contact-styles.css">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="vision.html"  target="_self">Our Vision</a></li>
-            <li><a href="contact.html" target="_self">Contact Us</a></li>
+            <li><a href="vision.html">Our Vision</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- Contact Us Content -->
+    <!-- MAIN -->
     <div class="contact-container">
+
+        <!-- LEFT -->
         <div class="image-section">
             <img src="icon.png" alt="FinSwip Logo">
         </div>
+
+        <!-- RIGHT -->
         <div class="details-section">
+
             <h1>Contact Us</h1>
-            <h4>If you have any questions or want to join this journey please contact us:</h4>
-            <p><br>Email: <a href="mailto:finswip@gmail.com">finswip@gmail.com</a></p>
-            <p>Phone: +91 98913 28610</p>
+
+            <div class="left-contact">
+                <p>📧 <a href="mailto:finswip@gmail.com">finswip@gmail.com</a></p>
+                <p>📞 <a href="tel:+919891328610">+91 98913 28610</a></p>
+            </div>
+
+            <!-- FORM -->
+            <div class="premium-form">
+
+                <h2>For Feedback, Suggestions & Business Inquiries</h2>
+                <br>
+
+                <form action="https://formspree.io/f/mgopzple" method="POST">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+
+                    <input type="email" name="email" placeholder="Email Address" required>
+
+                    <select name="topic" required>
+                        <option value="">Select Topic</option>
+                        <option>App Feedback</option>
+                        <option>Feature Request</option>
+                        <option>Bug Report</option>
+                        <option>Partnership / Business</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Tell us what’s on your mind..." required></textarea>
+
+                    <button type="submit">SEND MESSAGE</button>
+
+                </form>
+
+            </div>
+
         </div>
+
     </div>
+
+
+    <script>
+    window.addEventListener("pageshow", function (event) {
+        const form = document.querySelector("form");
+        if (form) {
+            form.reset();
+        }
+    });
+</script>
+
 </body>
+
 </html>

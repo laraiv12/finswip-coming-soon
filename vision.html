@@ -4,28 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Vision - FinSwip</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="vision-styles.css"> <!-- Reusing the same CSS file -->
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="vision.html"  target="_self">Our Vision</a></li>
-            <li><a href="contact.html" target="_self">Contact Us</a></li>
-        </ul>
-    </nav>
 
-    <!-- Contact Us Content -->
-    <div class="contact-container">
-        <div class="image-section">
-            <img src="icon.png" alt="FinSwip Logo">
-        </div>
-        <div class="details-section">
-            <h1>Welcome to FinSwip!</h1>
-            <p><br>This is our first offering, Our Vision is to provide you latest & best Financial News App. Stay informed and make smarter financial decisions with FinSwip, your ultimate financial news companion. Get real-time updates, expert insights, and market trends tailored for investors, traders, and finance enthusiasts.<br>Key Features:<br>📈 Latest Financial News: Get 24/7 updates on financial markets, stocks, and economic trends from trusted sources.<br>📊 Market Analysis: Gain insights with expert commentary and technical analysis to stay ahead in your investments.<br>🗞️ Fast Updates: Never miss critical market movements with our real-time updates.<br>🎯 User-Friendly Design: Navigate easily through financial updates with a sleek and intuitive interface.<br>🛠️ Secure Login: Log in using your mobile number or Gmail for a seamless experience.</p>
-        </div>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vision-styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="vision.html" class="active">Our Vision</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="contact-container">
+
+    <div class="image-section">
+        <img src="icon.png" alt="FinSwip Logo">
     </div>
+
+    <div class="details-section">
+        <h1>Welcome to FinSwip!</h1>
+        <p class="subtitle">
+            This is our first offering, Our Vision is to provide you latest & best Financial News App. Stay informed and make smarter financial decisions with FinSwip, your ultimate financial news companion. Get real-time updates, expert insights, and market trends tailored for investors, traders, and finance enthusiasts.
+        </p>
+<div class="slider-wrapper">
+
+    <button class="nav-btn left" id="leftBtn">←</button>
+
+        <div class="card-slider">
+
+            <div class="card">
+                <div class="icon">📈</div>
+                <h4>Latest News</h4>
+                <p>Get 24/7 updates on financial markets, stocks, and economic trends from trusted sources.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h4>Market Analysis</h4>
+                <p>Gain insights with expert commentary and technical analysis to stay ahead in your investments.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h4>Fast Updates</h4>
+                <p>Never miss critical market movements with our real-time updates.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h4>User-Friendly Design</h4>
+                <p>Navigate easily through financial updates with a sleek and intuitive interface.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h4>Secure Login</h4>
+                <p>Log in using your mobile number or Gmail for a seamless experience.</p>
+            </div>
+
+        </div>
+         <button class="nav-btn right" id="rightBtn">→</button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script>
+const slider = document.querySelector(".card-slider");
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+
+rightBtn.addEventListener("click", () => {
+    slider.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+});
+
+leftBtn.addEventListener("click", () => {
+    slider.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+});
+</script>
+
 </body>
 </html>
