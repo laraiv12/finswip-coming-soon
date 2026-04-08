@@ -112,6 +112,30 @@ body {
     border-radius: 6px;
 }
 
+/* POLICY LINKS */
+.policy-links {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.policy-links p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.policy-links p:first-child {
+    margin-left: 20px;
+}
+
+.policy-links a {
+    color: rgba(15, 23, 42, 0.85);
+    text-decoration: none;
+}
+
 /* RIGHT IMAGE */
 .phone-image {
     flex: 1;
@@ -150,6 +174,14 @@ body {
     .phone-image img {
         width: 260px;
         margin-top: 20px;
+    }
+
+    .policy-links {
+        justify-content: center;
+    }
+
+    .policy-links p:first-child {
+        margin-left: 0;
     }
 
     .navbar {
